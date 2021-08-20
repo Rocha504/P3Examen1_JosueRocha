@@ -10,6 +10,7 @@ class Red
 	private:
 		vector <PC*> pcs;
 	public:
+		int convertir(int);
 		Red();
 		void ingresar(int);
 		void agregarPc(PC*);
