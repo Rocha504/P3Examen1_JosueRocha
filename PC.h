@@ -2,6 +2,7 @@
 #define PC_H
 #include<string>
 using std::string;
+ 
 
 class PC
 {
@@ -9,12 +10,15 @@ class PC
 	
 	private:
 		
-		string IP;
+		string ip;
 		string maskRed;
 		string hostname;
 		
 	public:
-		
+		void show();
+		string getHostname();
+		string getMaskred();
+		string getIP();
 		PC(string,string,string);
 		~PC();
 	 

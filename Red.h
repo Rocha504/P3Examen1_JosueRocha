@@ -8,9 +8,12 @@ class Red
 {
 	
 	private:
-		vector <PC> Pcs;
+		vector <PC*> pcs;
 	public:
 		Red();
+		void agregarPc(PC*);
+		void listar();
+		vector <PC*> getPcs();
 		~Red();
 	 
 };
