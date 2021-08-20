@@ -21,6 +21,37 @@ void Red :: listar(){
 		cout<<endl;
 	}
 }
+void Red :: ingresar(int select){
+
+	string comando;
+	PC* pcActual=this->pcs[select];
+	cout<<pcActual->getHostname()<<"#";
+	cin>>comando;
+	while(comando!="exit"){
+		if(comando=="show"){
+			this->pcs[select]->show();
+			cout<<endl;
+			cout<<this->pcs[select]->getHostname()<<"#";
+			cin>>comando;
+		}	
+		else
+			if(comando.find("ping") != string::npos){
+		    	
+				string ip1=	this->pcs[select]->getIP();
+				string mask1=this->pcs[select]->getMaskred();
+				string ip2=comando.substr(5);
+				string mask2;
+				for(int i=0;i<this->pcs.size();i++){
+					if(this->pcs[i]->getIP()==ip2){
+						mask2=this->pcs[i]->getIP();
+					}
+				}
+				
+				
+					 
+			}
+		}
+}
 
 Red::~Red()
 {

@@ -11,6 +11,7 @@ class Red
 		vector <PC*> pcs;
 	public:
 		Red();
+		void ingresar(int);
 		void agregarPc(PC*);
 		void listar();
 		vector <PC*> getPcs();

@@ -26,26 +26,12 @@ int main(int argc, char** argv) {
 			break;
 			case 2:{
 				int select;
-				string comando;
 				cout<<"---INGRESAR A PC---"<<endl;
 			 	network->listar();
 			 	cout<<"Ingrese el numero de la PC a la que desea ingresar"<<endl;
 			 	cin>>select;
 			 	cout<<endl;
-			 	cout<<network->getPcs()[select]->getHostname()<<"#";
-				cin>>comando;
-				while(comando!="exit"){
-					if(comando=="show"){
-			 			network->getPcs()[select]->show();
-			 			cout<<endl;
-			 			cout<<network->getPcs()[select]->getHostname()<<"#";
-			 			cin>>comando;
-					}	
-					else
-						if(comando=="ping"){
-						
-						}
-				}	
+					
 			}
 			break;
 		}
