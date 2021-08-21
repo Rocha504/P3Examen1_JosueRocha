@@ -16,7 +16,6 @@ class PC
 		
 	public:
 		void show();
-		void ping(string);
 		string getHostname();
 		string getMaskred();
 		string getIP();

@@ -28,6 +28,6 @@ void PC :: show(){
 	
 }
 
-void PC :: ping(string ip){
-		
-}
+ 
+
+ 

@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
 			 	cout<<"Ingrese el numero de la PC a la que desea ingresar"<<endl;
 			 	cin>>select;
 			 	cout<<endl;
-					
+				network->ingresar(select);	
 			}
 			break;
 		}
