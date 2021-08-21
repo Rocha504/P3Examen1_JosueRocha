@@ -61,7 +61,7 @@ void Red :: ingresar(int select){
 				}
 				else{
 					long n1,n2,n3,n4;
-					string ip1Binario="",ip2Binario="",mask1Binario="",mask2Binario="";
+					string ip1Binario="",ip2Binario="",mask1Binario="";
 					string ip1=	this->pcs[select]->getIP();
 					string mask1=this->pcs[select]->getMaskred();
 					string mask2;
@@ -114,13 +114,43 @@ void Red :: ingresar(int select){
 				    mask1Binario+=n3;
 				    mask1Binario+=n4;
 				    numeros.clear();
-				    
-				    
-						
-					
-				}  
-			}
-		}
+				    //4
+				int acumD1=0;
+				for(int z=0;z<mask1Binario.length();z++){
+					char aux=mask1Binario[z];
+					if(aux=='1'){
+						acum+=1;
+					}
+				} 
+				string temp1=ip1Binario.substr(0,acum);
+				string temp2=ip2Binario.substr(0,acum);
+				if(temp1==temp2){
+					cout<<"Pinging to "<<ip2<<"with 32 bytes of data: "<<endl;
+					cout<<"Reply from"<<ip2<<": "<<" bytes=32 time=37ms TTL=446"<<endl;
+					cout<<"Reply from"<<ip2<<": "<<" bytes=32 time=37ms TTL=446"<<endl;
+					cout<<"Reply from"<<ip2<<": "<<" bytes=32 time=37ms TTL=446"<<endl;
+					cout<<"Reply from"<<ip2<<": "<<" bytes=32 time=37ms TTL=446"<<endl;
+					cout<<"Ping statistics for "<<ip2<<": "<<endl;
+					cout<<"		Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)"<<endl;
+					cout<<pcActual->getHostname()<<"#";
+					cin>>comando;
+				}
+				else{
+					cout<<"Pinging to "<<ip2<<"with 32 bytes of data: "<<endl;
+					cout<<"Reply from"<<ip2<<": "<<" Destination host unreachable"<<endl;
+					cout<<"Reply from"<<ip2<<": "<<" Destination host unreachable"<<endl;
+					cout<<"Reply from"<<ip2<<": "<<" Destination host unreachable"<<endl;
+					cout<<"Reply from"<<ip2<<": "<<" Destination host unreachable"<<endl;
+					cout<<"Ping statistics for "<<ip2<<": "<<endl;
+					cout<<"		Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)"<<endl;
+					cout<<pcActual->getHostname()<<"#";
+					cin>>comando;
+				}
+			} 
+				 
+				
+		}	
+	}
 }
 
 void Red :: ping(string ip){
