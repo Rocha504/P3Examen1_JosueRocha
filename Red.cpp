@@ -182,5 +182,9 @@ int  Red :: convertir(int octeto){
 
 Red::~Red()
 {
-	//recorrer vector y eliminar
+	for(int i=0;i<this->pcs.size();i++){
+		if(pcs[i] != NULL){
+			delete pcs[i];
+		}
+	}
 }
